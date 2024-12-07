@@ -85,12 +85,12 @@ body {
 }
 
 .acc {
-    gap: 70px;
+    gap: 50px;
 }
 
 .acc div {
     cursor: pointer;
-    font-size: 23px;
+    font-size: 19px;
     font-weight: bold;
     color: var(--color-text-dark);
 }
@@ -111,7 +111,7 @@ body {
 
 .heading {
     font-family: sans-serif;
-    font-size: 100px;
+    font-size: 80px;
     font-weight: bold;
     margin-bottom: 10px;
     text-shadow: var(--shadow-medium);
@@ -126,7 +126,7 @@ body {
 }
 
 .para {
-    font-size: xx-large;
+    font-size: x-large;
     margin-top: 20px;
     max-width: 90%;
     line-height: 1.5;
@@ -136,7 +136,7 @@ body {
     display: inline-flex; 
     align-items: center; 
     justify-content: center; 
-    padding: 15px 30px;
+    padding: 15px 27px;
     font-size: 1rem;
     font-weight: bold;
     color: var(--color-button-text);
