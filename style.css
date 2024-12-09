@@ -96,6 +96,12 @@ body {
     display: flex;
     gap: 40px;
 }
+.navbar a{
+    text-decoration: none;
+}
+.acc a{
+    text-decoration: none;
+}
 
 .acc div {
     position: relative;
@@ -121,6 +127,9 @@ body {
 .acc div:hover hr {
     transform: scaleX(1);
     opacity: 1;
+}
+.acc a{
+    text-decoration: no;
 }
 
 /* Main Section */
@@ -460,56 +469,55 @@ input[type="text"]:focus {
     }
 }
 
-@media (max-width: 480px) {
-    .footer-left h3,
-    .footer-center h4,
-    .footer-right h4 {
-        font-size: 1
+    
+    /* Responsive Design */
+    @media (max-width: 480px) {
+        .main3 h2 {
+            font-size: 1.5rem;
+        }
+        
+        .main3 p {
+            font-size: 0.9rem;
+        }
+        
+        label {
+            font-size: 0.8rem;
+        }
+        
+        select,
+        input[type="text"] {
+            font-size: 0.9rem;
+            padding: 8px;
+        }
+        
+        .submit-button {
+            padding: 10px;
+            font-size: 1rem;
+        }
     }
-
-/* Responsive Design */
-@media (max-width: 480px) {
-    .main3 h2 {
-        font-size: 1.5rem;
+    
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        
+        .name p {
+            font-size: xx-large;
+        }
+        
+        .tabs .tab1,
+        .tabs .tab2,
+        .tabs .tab3,
+        .tabs .tab4 {
+            flex: 1 1 calc(50% - 20px);
+            /* 2 tabs in a row */
+        }
+        .footer-left h3,
+        .footer-center h4,
+        .footer-right h4 {
+            font-size: 1
+        }
     }
-
-    .main3 p {
-        font-size: 0.9rem;
-    }
-
-    label {
-        font-size: 0.8rem;
-    }
-
-    select,
-    input[type="text"] {
-        font-size: 0.9rem;
-        padding: 8px;
-    }
-
-    .submit-button {
-        padding: 10px;
-        font-size: 1rem;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-
-    .name p {
-        font-size: xx-large;
-    }
-
-    .tabs .tab1,
-    .tabs .tab2,
-    .tabs .tab3,
-    .tabs .tab4 {
-        flex: 1 1 calc(50% - 20px);
-        /* 2 tabs in a row */
-    }
-}
-
-@media (max-width: 768px) {
+    
+    @media (max-width: 768px) {
     body {
         padding-top: 20px;
     }
