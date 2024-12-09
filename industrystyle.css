@@ -62,6 +62,8 @@ body {
 }
 
 .name {
+    margin-top: 30px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -157,12 +159,11 @@ body {
     padding: 20px 0;
     justify-items: center;
     align-items: center;
+    flex-direction: row;
 }
 
 .tab1, .tab2, .tab3, .tab4, .tab5, .tab6, .tab7 {
     background-color: white;
-    border: 2px solid var(--color-primary-navy);
-    border-radius: var(--border-radius-medium);
     padding: 20px;
     text-align: left;
     box-shadow: var(--shadow-subtle);
@@ -171,11 +172,68 @@ body {
     height: 500px;
     width: 500px;
 }
+.tab1{
+    background-image: url("images/heavymachine.webp");
+    background-size: cover;
+    color: #F5F5F5;
+}
+.tab1 p{
+    color: white;
+}
+.tab2{
+    background-image: url("images/electronics.jpg");
+    background-size: cover;
+    color: #F5F5F5;
+}
+.tab2 p{
+    color: white;
+}
+.tab3{
+    background-image: url("images/textile.jpg");
+    background-size: cover;
+    color: #F5F5F5;
+}
+.tab3 p{
+    color: white;
+}
+.tab4{
+    background-image: url("images/food.jpg");
+    background-size: cover;
+    color: #F5F5F5;
+}
+.tab4 p{
+    color: white;
+}
+.tab5{
+    background-image: url("images/pharma.jpg");
+    background-size: cover;
+    color: #F5F5F5;
+}
+.tab5 p{
+    color: white;
+}
+.tab6{
+    background-image: url("images/auto.webp");
+    background-size: cover;
+    color: #F5F5F5;
+}
+.tab6 p{
+    color: white;
+}
+.tab7{
+    background-image: url("images/chemical.jpg");
+    background-size: cover;
+    color: #F5F5F5;
+}
+.tab7 p{
+    color: white;
+}
 
 .tab1:hover, .tab2:hover, .tab3:hover, .tab4:hover, .tab5:hover, .tab6:hover, .tab7:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-medium);
-    border-color: var(--color-accent-green);
+    border: 5px solid var(--color-accent-green);
+    border-radius: var(--border-radius-large);
 }
 
 /* Tab Heading */
@@ -196,13 +254,11 @@ body {
 .heading h2 {
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
-    color: var(--color-primary-navy);
 }
 
 /* Tab Description */
 .tabs p {
     font-size: 1rem;
-    color: var(--color-text-dark);
     line-height: 1.5;
 }
 
