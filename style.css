@@ -64,7 +64,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
 }
@@ -82,7 +82,7 @@ body {
 .acc div {
     position: relative;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: bold;
     color:  var(--color-primary-navy);
     text-align: center;
@@ -121,7 +121,7 @@ body {
 
 .heading {
     font-family: "Poppins", sans-serif;
-    font-size: 3rem;
+    font-size: 80px;
     font-weight: bold;
     margin-bottom: 10px;
     text-shadow: var(--shadow-medium);
@@ -136,10 +136,12 @@ body {
 }
 
 .para {
-    font-size: 1.2rem;
+    font-size: 30px;
     margin-top: 20px;
     max-width: 90%;
     line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-button {
@@ -173,7 +175,170 @@ body {
 
 .main-button:active {
     transform: translateY(0);
+}/* Main2 Section */
+.main2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 5vw;
+    background-color: var(--color-primary-bg);
+    text-align: center;
+    color: var(--color-text-dark);
 }
+
+
+.main2 h1 {
+    font-size: 3.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.main2 h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main2 p {
+    font-size: 25px;
+    color: var(--color-text-light);
+    margin-bottom: 30px;
+}
+
+/* Tabs Container */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tab Styling */
+.tabs .tab1,
+.tabs .tab2,
+.tabs .tab3,
+.tabs .tab4 {
+    background-color: white;
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--shadow-subtle);
+    text-align: center;
+    padding: 20px;
+    flex: 1 1 calc(25% - 20px); /* 4 tabs in a row with gap */
+    max-width: 300px;
+    min-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.tabs .tab1:hover,
+.tabs .tab2:hover,
+.tabs .tab3:hover,
+.tabs .tab4:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--shadow-strong);
+}
+
+/* Tab Logo */
+.tablogo img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+/* Tab Title Hover Effect */
+.tabs .tab1:hover h3,
+.tabs .tab2:hover h3,
+.tabs .tab3:hover h3,
+.tabs .tab4:hover h3 {
+    color: var(--color-button-primary); /* Purple color */
+    transition: color 0.3s ease;
+}
+.tabs .tab1:hover img,
+.tabs .tab2:hover img,
+.tabs .tab3:hover img,
+.tabs .tab4:hover img {
+    transform: rotate(10deg);
+    transition: transform 0.4s ease;
+
+}
+
+
+/* Tab Title */
+.tabs h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-primary-navy);
+    margin-bottom: 10px;
+}
+
+/* Tab Description */
+.tabs p {
+    font-size: 20px;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .tabs .tab1,
+    .tabs .tab2,
+    .tabs .tab3,
+    .tabs .tab4 {
+        flex: 1 1 calc(50% - 20px); /* 2 tabs in a row */
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        padding-top: 20px;
+    }
+    .tabs {
+        gap: 15px;
+    }
+    .main{
+        margin-top: 20px;
+    }
+
+    .tabs .tab1,
+    .tabs .tab2,
+    .tabs .tab3,
+    .tabs .tab4 {
+        flex: 1 1 100%; /* 1 tab in a row */
+        max-width: 100%;
+    }
+
+    .main2 h2 {
+        font-size: 1.7rem;
+    }
+
+    .main2 p {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .main2 {
+        padding: 20px;
+    }
+
+    .tabs .tab1,
+    .tabs .tab2,
+    .tabs .tab3,
+    .tabs .tab4 {
+        padding: 15px;
+    }
+
+    .tabs h3 {
+        font-size: 1rem;
+    }
+
+    .tabs p {
+        font-size: 1.8rem;
+    }
+}
+
+
 
 /* Media Queries */
 @media (max-width: 1024px) {
@@ -242,35 +407,49 @@ body {
 }
 
 @media (max-width: 480px) {
-    .navbar {
-        padding: 5px;
+    body{
+        padding-top: 45px;
+    }
+    .main{
+        margin-top: 50px;
+    }
+    .main2 {
+        padding: 15px; 
     }
 
-    .name {
-        font-size: 1.1rem;
+    .main2 h2 {
+        font-size: 1.5rem; 
+    }
+    .main2 h1 {
+        font-size: 1.8rem; 
     }
 
-    .acc {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    .main2 p {
+        font-size: 0.85rem; 
+        margin-bottom: 20px;
     }
 
-    .main {
-        height: auto;
-        padding: 10px;
+  
+    .tabs {
+        flex-direction: column; 
+        gap: 15px; 
     }
 
-    .heading {
-        font-size: 1.5rem;
+    .tabs .tab1,
+    .tabs .tab2,
+    .tabs .tab3,
+    .tabs .tab4 {
+        flex: 1 1 100%; 
+        max-width: 100%;
+        padding: 15px; 
     }
 
-    .para {
-        font-size: 0.8rem;
+    .tabs h3 {
+        font-size: 1rem; 
     }
 
-    .main-button {
-        padding: 8px 15px;
-        font-size: 0.8rem;
+    .tabs p {
+        font-size: 0.8rem; 
+        line-height: 1.4; 
     }
 }
