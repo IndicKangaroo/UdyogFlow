@@ -47,6 +47,7 @@ body {
     background-color: var(--color-primary-bg);
     color: var(--color-text-dark);
     margin: 0;
+    padding-top: 1vh;
 }
 
 /* Navbar */
@@ -67,10 +68,27 @@ body {
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
+    background: linear-gradient(315deg, #094c3e, #0f6432, #460ee0, #680cb3, #460ee0);
+    background-clip: text;
+    color: transparent;
+    transition: font-size 0.5s ease;
 }
 
 .name img {
-    height: 50px;
+    transition: transform 0.5s ease;
+}
+
+.name:hover {
+    font-size: 2.2rem;
+}
+
+.name:hover img {
+    transform: rotate(10deg);
+
+}
+
+.name img {
+    height: 65px;
     border-radius: var(--border-radius-medium);
 }
 
@@ -84,7 +102,7 @@ body {
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: bold;
-    color:  var(--color-primary-navy);
+    color: var(--color-primary-navy);
     text-align: center;
 }
 
@@ -175,7 +193,9 @@ body {
 
 .main-button:active {
     transform: translateY(0);
-}/* Main2 Section */
+}
+
+/* Main2 Section */
 .main2 {
     display: flex;
     flex-direction: column;
@@ -192,6 +212,7 @@ body {
     font-weight: bold;
     margin-bottom: 10px;
 }
+
 .main2 h2 {
     font-size: 2rem;
     font-weight: bold;
@@ -225,7 +246,8 @@ body {
     box-shadow: var(--shadow-subtle);
     text-align: center;
     padding: 20px;
-    flex: 1 1 calc(25% - 20px); /* 4 tabs in a row with gap */
+    flex: 1 1 calc(25% - 20px);
+    /* 4 tabs in a row with gap */
     max-width: 300px;
     min-width: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -245,14 +267,17 @@ body {
     height: 60px;
     margin-bottom: 10px;
 }
+
 /* Tab Title Hover Effect */
 .tabs .tab1:hover h3,
 .tabs .tab2:hover h3,
 .tabs .tab3:hover h3,
 .tabs .tab4:hover h3 {
-    color: var(--color-button-primary); /* Purple color */
+    color: var(--color-button-primary);
+    /* Purple color */
     transition: color 0.3s ease;
 }
+
 .tabs .tab1:hover img,
 .tabs .tab2:hover img,
 .tabs .tab3:hover img,
@@ -280,22 +305,30 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+
+    .name p {
+        font-size: xx-large;
+    }
+
     .tabs .tab1,
     .tabs .tab2,
     .tabs .tab3,
     .tabs .tab4 {
-        flex: 1 1 calc(50% - 20px); /* 2 tabs in a row */
+        flex: 1 1 calc(50% - 20px);
+        /* 2 tabs in a row */
     }
 }
 
 @media (max-width: 768px) {
-    body{
+    body {
         padding-top: 20px;
     }
+
     .tabs {
         gap: 15px;
     }
-    .main{
+
+    .main {
         margin-top: 20px;
     }
 
@@ -303,7 +336,8 @@ body {
     .tabs .tab2,
     .tabs .tab3,
     .tabs .tab4 {
-        flex: 1 1 100%; /* 1 tab in a row */
+        flex: 1 1 100%;
+        /* 1 tab in a row */
         max-width: 100%;
     }
 
@@ -407,49 +441,52 @@ body {
 }
 
 @media (max-width: 480px) {
-    body{
+    body {
         padding-top: 45px;
     }
-    .main{
+
+    .main {
         margin-top: 50px;
     }
+
     .main2 {
-        padding: 15px; 
+        padding: 15px;
     }
 
     .main2 h2 {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
+
     .main2 h1 {
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
     }
 
     .main2 p {
-        font-size: 0.85rem; 
+        font-size: 0.85rem;
         margin-bottom: 20px;
     }
 
-  
+
     .tabs {
-        flex-direction: column; 
-        gap: 15px; 
+        flex-direction: column;
+        gap: 15px;
     }
 
     .tabs .tab1,
     .tabs .tab2,
     .tabs .tab3,
     .tabs .tab4 {
-        flex: 1 1 100%; 
+        flex: 1 1 100%;
         max-width: 100%;
-        padding: 15px; 
+        padding: 15px;
     }
 
     .tabs h3 {
-        font-size: 1rem; 
+        font-size: 1rem;
     }
 
     .tabs p {
-        font-size: 0.8rem; 
-        line-height: 1.4; 
+        font-size: 0.8rem;
+        line-height: 1.4;
     }
 }
