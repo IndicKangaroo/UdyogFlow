@@ -302,6 +302,110 @@ body {
     color: var(--color-text-light);
     line-height: 1.5;
 }
+/* Main3 Section */
+.main3 {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-primary-bg);
+    color: var(--color-text-dark);
+    margin: 20px auto;
+}
+
+.main3 h2 {
+    background: linear-gradient(315deg, #094c3e, #0f6432, #460ee0, #680cb3, #460ee0);
+    background-clip: text;
+    color: transparent;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main3 p {
+    font-size: 25px;
+    color: var(--color-text-light);
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+select,
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border: 1px solid var(--color-text-light);
+    border-radius: var(--border-radius-medium);
+    background-color: var(--color-primary-bg);
+    box-shadow: var(--shadow-subtle);
+    color: var(--color-text-dark);
+    outline: none;
+}
+
+select:focus,
+input[type="text"]:focus {
+    border-color: var(--color-accent-green);
+    box-shadow: 0 0 5px var(--color-accent-green);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: var(--color-button-primary);
+    color: var(--color-button-text);
+    border: none;
+    border-radius: var(--border-radius-medium);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--color-button-hover);
+    transform: translateY(-2px);
+}
+
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .main3 h2 {
+        font-size: 1.5rem;
+    }
+
+    .main3 p {
+        font-size: 0.9rem;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    select,
+    input[type="text"] {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .submit-button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
