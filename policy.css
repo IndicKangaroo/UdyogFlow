@@ -136,6 +136,155 @@ header.navbar {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
 }
+/* Policy Page Specific Styles */
+/* Policy Section */
+.policy-section {
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 600px;
+    background-color: var(--color-primary-bg);
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-family: var(--font-primary);
+}
+
+.policy-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--color-primary-purple);
+}
+
+/* Dropdown Styling */
+.state-selector,
+.industry-selector {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: var(--color-text-dark);
+    font-weight: 600;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--color-text-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    font-family: var(--font-primary);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: var(--color-accent-green);
+}
+
+/* Button Styling */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: var(--color-accent-green);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: var(--font-secondary);
+}
+
+button:hover {
+    background: var(--color-accent-orange);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Policies Section */
+#policies {
+    margin-top: 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .policy-section {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+.policy-section {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.state-selector,
+.industry-selector {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.state-selector label,
+.industry-selector label {
+    margin-right: 10px;
+}
+
+.state-selector select,
+.industry-selector select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-family: var(--font-primary);
+}
+
+.policies-section {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.policies-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--color-primary-navy);
+}
+
+.policies-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.policies-section ul li {
+    margin-bottom: 10px;
+}
+
+.policies-section ul li::before {
+    content: "• ";
+    color: var(--color-accent-green);
+}
+
+.policies-section p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+}
+
 
 .footer {
     background-color: var(--color-primary-navy);
