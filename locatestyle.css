@@ -133,35 +133,42 @@ header.navbar {
     animation: fadeIn 2s ease-in-out;
 }
 .footer {
-    flex-shrink: 0; /* Footer remains at the bottom */
     background-color: var(--color-primary-navy);
     color: white;
     padding: 20px 10vw;
     font-family: "Open Sans", sans-serif;
+    text-align: center;
 }
 
-footer.footer {
-    flex-shrink: 0; /* Footer does not shrink */
-    background: var(--color-primary-navy);
-    color: white;
-    padding: 20px 5%;
-    font-size: 0.9rem;
-}
-
-footer-container {
+.footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
 }
 
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
 .footer-left h3,
 .footer-center h4,
 .footer-right h4 {
     font-family: "Poppins", sans-serif;
-    font-family: var(--font-secondary);
+    font-size: 1.5rem;
     margin-bottom: 10px;
     color: var(--color-accent-green);
+}
+
+.footer-left p,
+.footer-right p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-text-light);
 }
 
 .footer-center ul {
@@ -170,11 +177,15 @@ footer-container {
     margin: 0;
 }
 
+.footer-center ul li {
+    margin: 5px 0;
+}
+
 .footer-center ul li a {
     text-decoration: none;
     font-size: 0.9rem;
     color: white;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .footer-center ul li a:hover {
@@ -183,9 +194,8 @@ footer-container {
 
 .footer-bottom {
     margin-top: 20px;
-    text-align: center;
-    color: var(--color-text-light);
     font-size: 0.8rem;
+    color: var(--color-text-light);
 }
 /* Animations */
 @keyframes fadeIn {
