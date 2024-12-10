@@ -52,12 +52,12 @@
             <h1>Why Choose UdyogFlow?</h1>
             <p>Your comprehensive insustrial setup companion</p>
             <div class="tabs">
-                <div class="tab1">
+                <a href="Locate.html"><div class="tab1">
                     <div class="tablogo"><img src="./images/icons8-location-50.png" alt="location"></div>
                     <h2>Location Intelligence</h2>
                     <p>Find the perfect location for your industry based on infrastructure, resources, and market
                         access.</p>
-                </div>
+                </div></a>
                 <div class="tab2">
                     <div class="tablogo"><img src="./images/icons8-document-50.png" alt="documents">
                         <h2>Policy Navigation
@@ -111,14 +111,22 @@
                     <option value="5cr-to-10cr">5 Crore to 10 Crore</option>
                     <option value="more-than-10cr">Above 10 Crore</option>
                 </select>
-
+                
                 <!-- Preferred Location -->
+                
+                <label for="state">State:</label>
+                <select id="state" name="state" required>
+                    <option value="" disabled selected>Select State</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                </select>
                 <label for="preferred-location">Preferred Location:</label>
                 <input type="text" id="preferred-location" name="preferred-location"
-                    placeholder="Enter location (optional)">
+                    placeholder="Enter district (optional)">
 
                 <!-- Get Recommendation Button -->
-                <button type="submit" class="submit-button">Get Recommendation</button>
+                <a href=""><button type="submit" class="submit-button">Get Recommendation</button></a>
             </form>
         </div>
     </div>

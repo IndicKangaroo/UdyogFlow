@@ -129,10 +129,16 @@ body {
     opacity: 1;
 }
 .acc a{
-    text-decoration: no;
+    text-decoration: none;
 }
 
 /* Main Section */
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  color: inherit;
+}
 .main {
     display: flex;
     flex-direction: column;
