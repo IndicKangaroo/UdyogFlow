@@ -1,0 +1,76 @@
+/* Contact Page Specific Styles */
+.contact-section {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.contact-form {
+    margin-top: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: var(--font-primary);
+}
+
+.contact-form button.submit-button {
+    background-color: var(--color-primary-purple);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button.submit-button:hover {
+    background-color: var(--color-accent-orange);
+}
+
+.contact-info {
+    margin-top: 50px;
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--color-primary-navy);
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info ul li a {
+    color: var(--color-primary-navy);
+    text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+    text-decoration: underline;
+}
