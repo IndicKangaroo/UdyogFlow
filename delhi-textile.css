@@ -112,18 +112,19 @@ body {
 .page-title {
     font-size: 2rem;
     font-weight: bold;
-    color: var(--color-primary-azure);
+    color:#680cb3;
     margin-top: 20px;
 }
 
 .section-title {
     font-size: 1.5rem;
-    color: var(--color-primary-azure);
+    color: var(--color-accent-green);
     margin-top: 20px;
 }
 
 .main-content {
     padding: 20px;
+
 }
 
 .section {
@@ -142,6 +143,86 @@ body {
 .link:hover {
     color: var(--color-accent-green);
 }
+/* General list styling */
+ol, ul {
+    padding-left: 20px;
+    margin: 20px 0;
+    list-style-position: outside;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+/* Styling for ordered lists */
+ol {
+    counter-reset: list-counter; /* Reset custom counter */
+    list-style: none; /* Remove default numbers */
+}
+
+ol > li {
+    counter-increment: list-counter; /* Increment counter */
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+ol > li::before {
+    content: counter(list-counter) ". "; /* Custom number style */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: var(--color-primary-navy);
+}
+
+/* Styling for unordered lists */
+ul {
+    list-style: none; /* Remove default bullet points */
+}
+
+ul > li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+ul > li::before {
+    content: "•"; /* Custom bullet point */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-accent-green);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Link styling inside lists */
+a.link {
+    text-decoration: none;
+    color: var(--color-accent-orange);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a.link:hover {
+    color: var(--color-primary-azure);
+    text-decoration: underline;
+}
+
+/* Nested lists */
+ol > li ul,
+ul > li ul {
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+ol > li ul > li,
+ul > li ul > li {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+}
+
 
 /* Footer */
 .footer {
@@ -150,6 +231,9 @@ body {
     padding: 20px 10vw;
     font-family: "Open Sans", sans-serif;
     text-align: center;
+    position: relative;
+    bottom: 0px;
+    width: 100vw;
 }
 
 .footer-container {
@@ -199,7 +283,10 @@ body {
     color: white;
     transition: color 0.3s ease;
 }
-
+.footer-left a{
+    text-decoration: none;
+    color: inherit;
+}
 .footer-center ul li a:hover {
     color: var(--color-accent-green);
 }

@@ -44,10 +44,13 @@
             <div class="industry-selector">
                 <label for="industry">Select Industry:</label>
                 <select id="industry" name="industry">
-                    <option value="">Select Industry</option>
                     <option value="textile">Textile Production</option>
+                    <option value="heavy">Heavy Machinery</option>
+                    <option value="electronics">Electronics Manufacturing</option>
+                    <option value="oil-processing">Chemical Processing</option>
+                    <option value="food-processing">Food Processing</option>
+                    <option value="food-processing">Pharmaceutical</option>
                     <option value="automotive">Automotive</option>
-                    <option value="agriculture">Agriculture</option>
                 </select>
             </div>
 
@@ -95,19 +98,19 @@
             // Map of state and industry to corresponding pages
             const policyPages = {
                 delhi: {
-                    textile: 'policies/delhi-textile.html',
-                    automotive: 'policies/delhi-automotive.html',
-                    agriculture: 'policies/delhi-agriculture.html'
+                    textile: 'delhi-textile.html',
+                    heavy: 'delhi-heavy.html',
+                    agriculture: 'delhi-agriculture.html'
                 },
                 haryana: {
-                    textile: 'policies/haryana-textile.html',
-                    automotive: 'policies/haryana-automotive.html',
-                    agriculture: 'policies/haryana-agriculture.html'
+                    textile: 'haryana-textile.html',
+                    heavy: 'haryana-heavy.html',
+                    agriculture: 'haryana-agriculture.html'
                 },
                 uttar: {
-                    textile: 'policies/uttar-textile.html',
-                    automotive: 'policies/uttar-automotive.html',
-                    agriculture: 'policies/uttar-agriculture.html'
+                    textile: 'uttar-textile.html',
+                    heavy: 'uttar-heavy.html',
+                    agriculture: 'uttar-agriculture.html'
                 }
             };
 

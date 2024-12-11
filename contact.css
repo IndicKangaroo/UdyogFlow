@@ -1,4 +1,108 @@
 /* Contact Page Specific Styles */
+:root {
+    --color-primary-navy: #1A374D;
+    --color-primary-purple: #680cb3;
+    --color-primary-bg: #F5F5F5;
+    --color-accent-green: #2ECC71;
+    --color-accent-orange: #F39C12;
+    --color-text-dark: #2C3E50;
+    --color-text-light: #7F8C8D;
+    --color-header-bg: linear-gradient(90deg, #680cb3, #2ECC71);
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --font-primary: "Open Sans", sans-serif;
+    --font-secondary: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--color-primary-bg);
+    color: var(--color-text-dark);
+}
+
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-header-bg);
+    padding: 10px 5%;
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.navbar {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    padding: 0 5vw;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.brand-name {
+    font-family: var(--font-secondary);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+}
+
+.menu-item:hover {
+    color: var(--color-accent-orange);
+}
+
+.menu-item::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent-green);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.menu-item:hover::after {
+    width: 100%;
+}
+
 .contact-section {
     padding: 50px 10%;
     text-align: center;
@@ -74,3 +178,72 @@
 .contact-info ul li a:hover {
     text-decoration: underline;
 }
+.footer {
+    background-color: var(--color-primary-navy);
+    color: white;
+    padding: 20px 10vw;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-left h3,
+.footer-center h4,
+.footer-right h4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--color-accent-green);
+}
+
+.footer-left p,
+.footer-right p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-text-light);
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-center ul li {
+    margin: 5px 0;
+}
+
+.footer-center ul li a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-center ul li a:hover {
+    color: var(--color-accent-green);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+}
+
