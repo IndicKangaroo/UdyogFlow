@@ -292,7 +292,7 @@ button:active {
     padding: 20px 10vw;
     font-family: "Open Sans", sans-serif;
     text-align: center;
-    position: fixed;
+    position: relative;
     bottom: 0px;
     width: 100%;
 }
