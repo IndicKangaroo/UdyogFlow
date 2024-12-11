@@ -95,7 +95,7 @@
                 <select id="industry-type" name="industry-type" required>
                     <option value="" disabled selected>Select Industry Type</option>
                     <option value="textile">Textile Production</option>
-                    <option value="heavy-machinery">Heavy Machinery</option>
+                    <option value="heavy">Heavy Machinery</option>
                     <option value="electronics">Electronics Manufacturing</option>
                     <option value="oil-processing">Chemical Processing</option>
                     <option value="food-processing">Food Processing</option>
@@ -129,7 +129,7 @@
                     placeholder="Enter district (optional)">
 
                 <!-- Get Recommendation Button -->
-                <a href=""><button type="submit" class="submit-button">Get Recommendation</button></a>
+                <button type="submit" class="submit-button">Get Recommendation</button>
             </form>
         </div>
     </div>
@@ -160,7 +160,69 @@
         </div>
     </footer>
 
+    <script>
+        document.getElementById("setup-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
 
+            // Get form values
+            const industryType = document.getElementById("industry-type").value;
+            const budgetRange = document.getElementById("budget-range").value;
+            const state = document.getElementById("state").value;
+
+            // Map of state, industry, and budget to corresponding pages
+            const pages = {
+                Delhi: {
+                    textile: {
+                        "under-25-lakhs": "delhi-textile.html",
+                        "25-lakhs-to-1cr": "delhi-textile.html",
+                        "1cr-to-5cr": "delhi-textile.html",
+                        "5cr-to-10cr": "delhi-textile.html",
+                        "more-than-10cr": "delhi-textile.html",
+                    },
+                    heavy: {
+                        "under-25-lakhs": "delhi-heavy.html",
+                        "25-lakhs-to-1cr": "delhi-heavy.html",
+                        "1cr-to-5cr": "delhi-heavy.html",
+                        "5cr-to-10cr": "delhi-heavy.html",
+                        "more-than-10cr": "delhi-heavy.html",
+                    },
+                    electronics: {
+                        "under-25-lakhs": "delhi-electronics.html",
+                        "25-lakhs-to-1cr": "delhi-electronics.html",
+                        "1cr-to-5cr": "delhi-electronics.html",
+                        "5cr-to-10cr": "delhi-electronics.html",
+                        "more-than-10cr": "delhi-electronics.html",
+                    },
+                },
+                // Add similar mappings for Haryana, Uttar Pradesh, etc...
+            };
+
+            // Check if the selected values exist in the pages map
+            if (!industryType || !budgetRange || !state) {
+                alert("Please select all required fields.");
+                return;
+            }
+
+            const statePages = pages[state];
+            if (!statePages) {
+                alert("No data found for this state.");
+                return;
+            }
+
+            const industryPages = statePages[industryType];
+            if (!industryPages) {
+                alert("No data found for this industry type.");
+                return;
+            }
+
+            const page = industryPages[budgetRange];
+            if (page) {
+                window.location.href = page; // Redirect to the correct page
+            } else {
+                alert("No data found for the selected budget range.");
+            }
+        });
+    </script>
 </body>
 
 </html>
