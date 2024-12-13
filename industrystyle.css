@@ -221,9 +221,7 @@ body {
 
 
 .tabs h2 {
-    background: linear-gradient(315deg, #094c3e, #0f6432, #460ee0, #680cb3, #460ee0);
-    background-clip: text;
-    color: transparent;
+    color: white;
     margin: 0;
     font-size: 1.5rem;
     z-index: 2;

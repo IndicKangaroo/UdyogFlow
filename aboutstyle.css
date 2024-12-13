@@ -342,7 +342,7 @@ header.navbar {
 .footer-right p {
     font-size: 0.9rem;
     line-height: 1.5;
-    color: var(--color-text-light);
+    color: white;
 }
 
 .footer-center ul {
@@ -369,5 +369,5 @@ header.navbar {
 .footer-bottom {
     margin-top: 20px;
     font-size: 0.8rem;
-    color: var(--color-text-light);
+    color:white;
 }
