@@ -267,6 +267,7 @@ a:hover, a:visited, a:link, a:active {
     min-width: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    border: 1px solid black;
 }
 
 .tabs .tab1:hover,

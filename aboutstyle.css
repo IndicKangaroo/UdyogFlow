@@ -38,13 +38,18 @@ header.navbar {
     padding: 10px 5%;
     color: white;
     box-shadow: var(--shadow);
+
 }
 
+.logo-container:hover img{
+ transform: rotate(10deg);
+}
 .logo-container {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: white;
+    gap: 20px;
 }
 
 .logo {
